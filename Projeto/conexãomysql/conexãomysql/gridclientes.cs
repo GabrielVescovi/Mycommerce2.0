@@ -62,7 +62,7 @@ namespace conexãomysql
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
-            CadastroCliente cc = new CadastroCliente();
+            CadastrodeClientes cc = new CadastrodeClientes();
             cc.Show(this);
             Hide();
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace conexãomysql
 {
-    public partial class CadastroCliente : Form
+    public partial class CadastrodeClientes : Form
     {
-        public CadastroCliente()
+        public CadastrodeClientes()
         {
             InitializeComponent();
         }

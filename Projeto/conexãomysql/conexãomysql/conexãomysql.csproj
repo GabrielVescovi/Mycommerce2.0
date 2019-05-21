@@ -53,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroCliente.cs">
+    <Compile Include="CadastrodeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroCliente.Designer.cs">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    <Compile Include="CadastrodeClientes.Designer.cs">
+      <DependentUpon>CadastrodeClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -90,8 +90,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CadastroCliente.resx">
-      <DependentUpon>CadastroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="CadastrodeClientes.resx">
+      <DependentUpon>CadastrodeClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

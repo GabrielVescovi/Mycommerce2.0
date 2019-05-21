@@ -1,6 +1,6 @@
 ﻿namespace conexãomysql
 {
-    partial class CadastroCliente
+    partial class CadastrodeClientes
     {
         /// <summary>
         /// Required designer variable.
