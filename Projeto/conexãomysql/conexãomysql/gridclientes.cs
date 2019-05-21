@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace conexãomysql
 {
@@ -57,8 +59,12 @@ namespace conexãomysql
 
         }
 
+
         private void Cadastrar_Click(object sender, EventArgs e)
         {
+            CadastroCliente cc = new CadastroCliente();
+            cc.Show(this);
+            Hide();
 
         }
     }

@@ -27,7 +27,9 @@ namespace conexãomysql
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Environment.Exit(0);
+
+
         }
     }
 }

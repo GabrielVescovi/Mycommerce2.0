@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gridclientes));
-            this.cadastrar = new System.Windows.Forms.Button();
+            this.cadastrarcliente = new System.Windows.Forms.Button();
             this.editar = new System.Windows.Forms.Button();
             this.excluir = new System.Windows.Forms.Button();
             this.voltar = new System.Windows.Forms.Button();
@@ -52,18 +52,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
-            // cadastrar
+            // cadastrarcliente
             // 
-            this.cadastrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cadastrar.BackgroundImage")));
-            this.cadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cadastrar.Location = new System.Drawing.Point(12, 23);
-            this.cadastrar.Name = "cadastrar";
-            this.cadastrar.Size = new System.Drawing.Size(54, 53);
-            this.cadastrar.TabIndex = 0;
-            this.cadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cadastrar.UseVisualStyleBackColor = true;
-            this.cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
+            this.cadastrarcliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cadastrarcliente.BackgroundImage")));
+            this.cadastrarcliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cadastrarcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cadastrarcliente.Location = new System.Drawing.Point(12, 23);
+            this.cadastrarcliente.Name = "cadastrarcliente";
+            this.cadastrarcliente.Size = new System.Drawing.Size(54, 53);
+            this.cadastrarcliente.TabIndex = 0;
+            this.cadastrarcliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cadastrarcliente.UseVisualStyleBackColor = true;
+            this.cadastrarcliente.Click += new System.EventHandler(this.Cadastrar_Click);
             // 
             // editar
             // 
@@ -217,7 +217,7 @@
             this.Controls.Add(this.voltar);
             this.Controls.Add(this.excluir);
             this.Controls.Add(this.editar);
-            this.Controls.Add(this.cadastrar);
+            this.Controls.Add(this.cadastrarcliente);
             this.Name = "gridclientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Gridclientes_Load);
@@ -231,7 +231,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cadastrar;
+        private System.Windows.Forms.Button cadastrarcliente;
         private System.Windows.Forms.Button editar;
         private System.Windows.Forms.Button excluir;
         private System.Windows.Forms.Button voltar;
