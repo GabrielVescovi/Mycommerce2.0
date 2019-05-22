@@ -48,16 +48,36 @@ namespace conexãomysql
 
         }
 
-        private void gridclientes_Load(object sender, EventArgs e)
+        class ClasseDAL
         {
-                dataGridView1.DataSource = GetListaclientes();
+            string conectabanco = "server = localhost; Database=my2; Uid=root; Port=3306; Pwd=vssql";
 
-        }
-        private DataTable GetListaclientes()
-        {
-            DataTable dteListaclientes = new DataTable();
+            MySqlConnection conexao = null;
+            MySqlCommand comando;
 
-            return dteListaclientes;
+            public DataTable ExibirDados()
+            {
+                try
+                {
+                    conexao = new MySqlConnection(conectabanco);
+                    comando = new MySqlCommand("select * from clientes", conexao);
+
+                    MySqlDataAdapter Da = new MySqlDataAdapter();
+                    Da.SelectCommand = comando;
+
+                    DataTable Dt = new DataTable();
+
+                    Da.Fill(Dt);
+
+                    return Dt;
+                }
+                catch(Exception erro)
+                {
+                    throw erro;
+                }
+            }
         }
+        
+
     }
 }

@@ -150,7 +150,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(702, 370);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // idClienteDataGridViewTextBoxColumn
             // 
@@ -237,7 +236,6 @@
             this.Controls.Add(this.cadastrarcliente);
             this.Name = "gridclientes";
             this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.gridclientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClientes)).EndInit();
