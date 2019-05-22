@@ -24,9 +24,10 @@ namespace conexãomysql
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            
             conexaoDataSet = new DataSet();
-            conexao = new MySqlConnection("server = localhost; Database=my2; Uid=root; Port=3308; Pwd=vssql");
+            conexao = new MySqlConnection("server = localhost; Database=my2; Uid=root; Port=3306; Pwd=vssql");
+
             try
             {
                 conexao.Open();

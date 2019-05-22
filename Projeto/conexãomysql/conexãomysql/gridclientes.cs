@@ -26,39 +26,6 @@ namespace conexãomysql
             Hide();
         }
 
-        private void Gridclientes_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'dataSet1.clientes'. Você pode movê-la ou removê-la conforme necessário.
-            this.clientesTableAdapter.Fill(this.dataSet1.clientes);
-
-        }
-
-        private void FillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillBy(this.dataSet1.clientes);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void FillByToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                this.clientesTableAdapter.FillBy(this.dataSet1.clientes);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
@@ -66,6 +33,31 @@ namespace conexãomysql
             cc.Show(this);
             Hide();
 
+        }
+
+        private void ConsultaclientesToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clientesTableAdapter.consultaclientes(this.tblClientes.clientes);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void gridclientes_Load(object sender, EventArgs e)
+        {
+                dataGridView1.DataSource = GetListaclientes();
+
+        }
+        private DataTable GetListaclientes()
+        {
+            DataTable dteListaclientes = new DataTable();
+
+            return dteListaclientes;
         }
     }
 }

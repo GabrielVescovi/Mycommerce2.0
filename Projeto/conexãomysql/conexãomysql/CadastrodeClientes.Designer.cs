@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrodeClientes));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.voltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(42, 106);
+            this.label2.Location = new System.Drawing.Point(42, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 31);
             this.label2.TabIndex = 1;
@@ -78,7 +80,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label4.Location = new System.Drawing.Point(16, 152);
+            this.label4.Location = new System.Drawing.Point(12, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 31);
             this.label4.TabIndex = 3;
@@ -88,7 +90,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label5.Location = new System.Drawing.Point(22, 199);
+            this.label5.Location = new System.Drawing.Point(22, 241);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 31);
             this.label5.TabIndex = 4;
@@ -98,7 +100,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label6.Location = new System.Drawing.Point(52, 243);
+            this.label6.Location = new System.Drawing.Point(52, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 31);
             this.label6.TabIndex = 5;
@@ -108,7 +110,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label7.Location = new System.Drawing.Point(73, 291);
+            this.label7.Location = new System.Drawing.Point(73, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 31);
             this.label7.TabIndex = 6;
@@ -125,7 +127,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox2.Location = new System.Drawing.Point(148, 106);
+            this.textBox2.Location = new System.Drawing.Point(148, 194);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(515, 38);
             this.textBox2.TabIndex = 8;
@@ -133,7 +135,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox3.Location = new System.Drawing.Point(148, 152);
+            this.textBox3.Location = new System.Drawing.Point(148, 150);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(515, 38);
             this.textBox3.TabIndex = 9;
@@ -141,7 +143,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox4.Location = new System.Drawing.Point(148, 196);
+            this.textBox4.Location = new System.Drawing.Point(148, 238);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(515, 38);
             this.textBox4.TabIndex = 10;
@@ -149,7 +151,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox5.Location = new System.Drawing.Point(148, 240);
+            this.textBox5.Location = new System.Drawing.Point(148, 282);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(515, 38);
             this.textBox5.TabIndex = 11;
@@ -157,7 +159,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox6.Location = new System.Drawing.Point(148, 284);
+            this.textBox6.Location = new System.Drawing.Point(148, 106);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(515, 38);
             this.textBox6.TabIndex = 12;
@@ -171,11 +173,26 @@
             this.textBox7.Size = new System.Drawing.Size(99, 38);
             this.textBox7.TabIndex = 13;
             // 
-            // CadastroCliente
+            // voltar
+            // 
+            this.voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("voltar.BackgroundImage")));
+            this.voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar.Location = new System.Drawing.Point(636, 370);
+            this.voltar.Name = "voltar";
+            this.voltar.Size = new System.Drawing.Size(54, 53);
+            this.voltar.TabIndex = 14;
+            this.voltar.Text = "Voltar";
+            this.voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.voltar.UseVisualStyleBackColor = true;
+            this.voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
+            // CadastrodeClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 435);
+            this.Controls.Add(this.voltar);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -190,7 +207,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "CadastroCliente";
+            this.Name = "CadastrodeClientes";
             this.Text = "CadastroCliente";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,5 +230,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button voltar;
     }
 }

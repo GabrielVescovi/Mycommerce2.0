@@ -157,7 +157,6 @@ C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\con
 C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.csprojAssemblyReference.cache
 C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.Form1.resources
 C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.Form2.resources
-C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.cadastrocliente.resources
 C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.gridclientes.resources
 C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.Properties.Resources.resources
 C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.csproj.GenerateResource.cache
@@ -235,3 +234,4 @@ C:\Users\Treinamento-pc\Documents\Programação\c#\Mycommerce2.0\Projeto\conexã
 C:\Users\Treinamento-pc\Documents\Programação\c#\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.csproj.GenerateResource.cache
 C:\Users\Treinamento-pc\Documents\Programação\c#\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.csproj.CoreCompileInputs.cache
 C:\Users\Treinamento-pc\Documents\Programação\c#\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.csproj.CopyComplete
+C:\Users\User\Documents\Programação\C#\conexãomysql\Mycommerce2.0\Projeto\conexãomysql\conexãomysql\obj\Debug\conexãomysql.CadastrodeClientes.resources

@@ -20,9 +20,9 @@ namespace conexãomysql {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TblClientes")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet1 : global::System.Data.DataSet {
+    public partial class TblClientes : global::System.Data.DataSet {
         
         private clientesDataTable tableclientes;
         
@@ -30,7 +30,7 @@ namespace conexãomysql {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataSet1() {
+        public TblClientes() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace conexãomysql {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TblClientes(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace conexãomysql {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet1 cln = ((DataSet1)(base.Clone()));
+            TblClientes cln = ((TblClientes)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace conexãomysql {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet1";
+            this.DataSetName = "TblClientes";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet1.xsd";
+            this.Namespace = "http://tempuri.org/TblClientes.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableclientes = new clientesDataTable();
@@ -225,7 +225,7 @@ namespace conexãomysql {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet1 ds = new DataSet1();
+            TblClientes ds = new TblClientes();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -283,6 +283,8 @@ namespace conexãomysql {
             
             private global::System.Data.DataColumn columnCidade;
             
+            private global::System.Data.DataColumn columnCPF;
+            
             private global::System.Data.DataColumn columnEmail;
             
             private global::System.Data.DataColumn columnEndereco;
@@ -339,6 +341,14 @@ namespace conexãomysql {
             public global::System.Data.DataColumn CidadeColumn {
                 get {
                     return this.columnCidade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CPFColumn {
+                get {
+                    return this.columnCPF;
                 }
             }
             
@@ -419,11 +429,12 @@ namespace conexãomysql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public clientesRow AddclientesRow(int Ativo, string Cidade, string Email, string Endereco, int idCliente, string Nome, string Telefone) {
+            public clientesRow AddclientesRow(int Ativo, string Cidade, int CPF, string Email, string Endereco, int idCliente, string Nome, string Telefone) {
                 clientesRow rowclientesRow = ((clientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Ativo,
                         Cidade,
+                        CPF,
                         Email,
                         Endereco,
                         idCliente,
@@ -460,6 +471,7 @@ namespace conexãomysql {
             internal void InitVars() {
                 this.columnAtivo = base.Columns["Ativo"];
                 this.columnCidade = base.Columns["Cidade"];
+                this.columnCPF = base.Columns["CPF"];
                 this.columnEmail = base.Columns["Email"];
                 this.columnEndereco = base.Columns["Endereco"];
                 this.columnidCliente = base.Columns["idCliente"];
@@ -474,6 +486,8 @@ namespace conexãomysql {
                 base.Columns.Add(this.columnAtivo);
                 this.columnCidade = new global::System.Data.DataColumn("Cidade", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCidade);
+                this.columnCPF = new global::System.Data.DataColumn("CPF", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCPF);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
                 this.columnEndereco = new global::System.Data.DataColumn("Endereco", typeof(string), null, global::System.Data.MappingType.Element);
@@ -562,7 +576,7 @@ namespace conexãomysql {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet1 ds = new DataSet1();
+                TblClientes ds = new TblClientes();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -669,6 +683,22 @@ namespace conexãomysql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int CPF {
+                get {
+                    try {
+                        return ((int)(this[this.tableclientes.CPFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'CPF\' na tabela \'clientes\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableclientes.CPFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Email {
                 get {
                     return ((string)(this[this.tableclientes.EmailColumn]));
@@ -758,6 +788,18 @@ namespace conexãomysql {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCPFNull() {
+                return this.IsNull(this.tableclientes.CPFColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCPFNull() {
+                this[this.tableclientes.CPFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEnderecoNull() {
                 return this.IsNull(this.tableclientes.EnderecoColumn);
             }
@@ -816,7 +858,7 @@ namespace conexãomysql {
         }
     }
 }
-namespace conexãomysql.DataSet1TableAdapters {
+namespace conexãomysql.TblClientesTableAdapters {
     
     
     /// <summary>
@@ -942,6 +984,7 @@ namespace conexãomysql.DataSet1TableAdapters {
             tableMapping.DataSetTable = "clientes";
             tableMapping.ColumnMappings.Add("Ativo", "Ativo");
             tableMapping.ColumnMappings.Add("Cidade", "Cidade");
+            tableMapping.ColumnMappings.Add("CPF", "CPF");
             tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Endereco", "Endereco");
             tableMapping.ColumnMappings.Add("idCliente", "idCliente");
@@ -950,12 +993,14 @@ namespace conexãomysql.DataSet1TableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `clientes` WHERE (((? = 1 AND `Ativo` IS NULL) OR (`Ativo` = ?)) AND ((? = 1 AND `Cidade` IS NULL) OR (`Cidade` = ?)) AND (`Email` = ?) AND ((? = 1 AND `Endereco` IS NULL) OR (`Endereco` = ?)) AND (`idCliente` = ?) AND ((? = 1 AND `Nome` IS NULL) OR (`Nome` = ?)) AND (`Telefone` = ?))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `clientes` WHERE (((? = 1 AND `Ativo` IS NULL) OR (`Ativo` = ?)) AND ((? = 1 AND `Cidade` IS NULL) OR (`Cidade` = ?)) AND ((? = 1 AND `CPF` IS NULL) OR (`CPF` = ?)) AND (`Email` = ?) AND ((? = 1 AND `Endereco` IS NULL) OR (`Endereco` = ?)) AND (`idCliente` = ?) AND ((? = 1 AND `Nome` IS NULL) OR (`Nome` = ?)) AND (`Telefone` = ?))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Ativo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ativo", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Ativo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ativo", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Cidade", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cidade", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Cidade", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cidade", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_CPF", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CPF", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_CPF", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CPF", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Endereco", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Endereco", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Endereco", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Endereco", global::System.Data.DataRowVersion.Original, false, null));
@@ -965,11 +1010,12 @@ namespace conexãomysql.DataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Telefone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telefone", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `clientes` (`Ativo`, `Cidade`, `Email`, `Endereco`, `idCliente`, `Nom" +
-                "e`, `Telefone`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `clientes` (`Ativo`, `Cidade`, `CPF`, `Email`, `Endereco`, `idCliente" +
+                "`, `Nome`, `Telefone`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Ativo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ativo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Cidade", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cidade", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("CPF", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CPF", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Endereco", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Endereco", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("idCliente", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idCliente", global::System.Data.DataRowVersion.Current, false, null));
@@ -977,10 +1023,11 @@ namespace conexãomysql.DataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Telefone", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Telefone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.Odbc.OdbcCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `clientes` SET `Ativo` = ?, `Cidade` = ?, `Email` = ?, `Endereco` = ?, `idCliente` = ?, `Nome` = ?, `Telefone` = ? WHERE (((? = 1 AND `Ativo` IS NULL) OR (`Ativo` = ?)) AND ((? = 1 AND `Cidade` IS NULL) OR (`Cidade` = ?)) AND (`Email` = ?) AND ((? = 1 AND `Endereco` IS NULL) OR (`Endereco` = ?)) AND (`idCliente` = ?) AND ((? = 1 AND `Nome` IS NULL) OR (`Nome` = ?)) AND (`Telefone` = ?))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `clientes` SET `Ativo` = ?, `Cidade` = ?, `CPF` = ?, `Email` = ?, `Endereco` = ?, `idCliente` = ?, `Nome` = ?, `Telefone` = ? WHERE (((? = 1 AND `Ativo` IS NULL) OR (`Ativo` = ?)) AND ((? = 1 AND `Cidade` IS NULL) OR (`Cidade` = ?)) AND ((? = 1 AND `CPF` IS NULL) OR (`CPF` = ?)) AND (`Email` = ?) AND ((? = 1 AND `Endereco` IS NULL) OR (`Endereco` = ?)) AND (`idCliente` = ?) AND ((? = 1 AND `Nome` IS NULL) OR (`Nome` = ?)) AND (`Telefone` = ?))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Ativo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ativo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Cidade", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cidade", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("CPF", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CPF", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Endereco", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Endereco", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("idCliente", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idCliente", global::System.Data.DataRowVersion.Current, false, null));
@@ -990,6 +1037,8 @@ namespace conexãomysql.DataSet1TableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Ativo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Ativo", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Cidade", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cidade", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Cidade", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cidade", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_CPF", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CPF", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_CPF", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CPF", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Email", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("IsNull_Endereco", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Endereco", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.Odbc.OdbcParameter("Original_Endereco", global::System.Data.Odbc.OdbcType.VarChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Endereco", global::System.Data.DataRowVersion.Original, false, null));
@@ -1009,29 +1058,39 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[3];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[5];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `Ativo`, `Cidade`, `Email`, `Endereco`, `idCliente`, `Nome`, `Telefone` FR" +
-                "OM `clientes`";
+            this._commandCollection[0].CommandText = "SELECT `Ativo`, `Cidade`, `CPF`, `Email`, `Endereco`, `idCliente`, `Nome`, `Telef" +
+                "one` FROM `clientes`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT `Ativo`, `Cidade`, `Email`, `Endereco`, `idCliente`, `Nome`, `Telefone` FR" +
-                "OM `clientes`";
+            this._commandCollection[1].CommandText = "SELECT `Ativo`, `Cidade`, `CPF`, `Email`, `Endereco`, `idCliente`, `Nome`, `Telef" +
+                "one` FROM `clientes`";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT `Ativo`, `Cidade`, `Email`, `Endereco`, `idCliente`, `Nome`, `Telefone` FR" +
-                "OM `clientes`";
+            this._commandCollection[2].CommandText = "SELECT        Ativo, Cidade, CPF, Email, Endereco, idCliente, Nome, Telefone\r\nFRO" +
+                "M            clientes";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        Ativo, Cidade, CPF, Email, Endereco, idCliente, Nome, Telefone\r\nFRO" +
+                "M            clientes";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT `Ativo`, `Cidade`, `CPF`, `Email`, `Endereco`, `idCliente`, `Nome`, `Telef" +
+                "one` FROM `clientes`";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.clientesDataTable dataTable) {
+        public virtual int Fill(TblClientes.clientesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1044,9 +1103,9 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.clientesDataTable GetData() {
+        public virtual TblClientes.clientesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.clientesDataTable dataTable = new DataSet1.clientesDataTable();
+            TblClientes.clientesDataTable dataTable = new TblClientes.clientesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1055,7 +1114,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(DataSet1.clientesDataTable dataTable) {
+        public virtual int consultaclientes(TblClientes.clientesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1068,7 +1127,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy1(DataSet1.clientesDataTable dataTable) {
+        public virtual int FillBy(TblClientes.clientesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1080,14 +1139,40 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1.clientesDataTable dataTable) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(TblClientes.clientesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy2(TblClientes.clientesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(TblClientes.clientesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1 dataSet) {
+        public virtual int Update(TblClientes dataSet) {
             return this.Adapter.Update(dataSet, "clientes");
         }
         
@@ -1110,7 +1195,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Ativo, string Original_Cidade, string Original_Email, string Original_Endereco, int Original_idCliente, string Original_Nome, string Original_Telefone) {
+        public virtual int Delete(int Original_Ativo, string Original_Cidade, int Original_CPF, string Original_Email, string Original_Endereco, int Original_idCliente, string Original_Nome, string Original_Telefone) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Ativo));
             if ((Original_Cidade == null)) {
@@ -1120,32 +1205,34 @@ namespace conexãomysql.DataSet1TableAdapters {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Cidade));
             }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_CPF));
             if ((Original_Email == null)) {
                 throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Email));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Email));
             }
             if ((Original_Endereco == null)) {
                 throw new global::System.ArgumentNullException("Original_Endereco");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Endereco));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Endereco));
             }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_idCliente));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_idCliente));
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_Nome));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_Nome));
             }
             if ((Original_Telefone == null)) {
                 throw new global::System.ArgumentNullException("Original_Telefone");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Telefone));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Telefone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1167,7 +1254,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Ativo, string Cidade, string Email, string Endereco, int idCliente, string Nome, string Telefone) {
+        public virtual int Insert(int Ativo, string Cidade, int CPF, string Email, string Endereco, int idCliente, string Nome, string Telefone) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Ativo));
             if ((Cidade == null)) {
                 throw new global::System.ArgumentNullException("Cidade");
@@ -1175,30 +1262,31 @@ namespace conexãomysql.DataSet1TableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Cidade));
             }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(CPF));
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Email));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Email));
             }
             if ((Endereco == null)) {
                 throw new global::System.ArgumentNullException("Endereco");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Endereco));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Endereco));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(idCliente));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(idCliente));
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Nome));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Nome));
             }
             if ((Telefone == null)) {
                 throw new global::System.ArgumentNullException("Telefone");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Telefone));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Telefone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1220,7 +1308,23 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Ativo, string Cidade, string Email, string Endereco, int idCliente, string Nome, string Telefone, int Original_Ativo, string Original_Cidade, string Original_Email, string Original_Endereco, int Original_idCliente, string Original_Nome, string Original_Telefone) {
+        public virtual int Update(
+                    int Ativo, 
+                    string Cidade, 
+                    int CPF, 
+                    string Email, 
+                    string Endereco, 
+                    int idCliente, 
+                    string Nome, 
+                    string Telefone, 
+                    int Original_Ativo, 
+                    string Original_Cidade, 
+                    int Original_CPF, 
+                    string Original_Email, 
+                    string Original_Endereco, 
+                    int Original_idCliente, 
+                    string Original_Nome, 
+                    string Original_Telefone) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Ativo));
             if ((Cidade == null)) {
                 throw new global::System.ArgumentNullException("Cidade");
@@ -1228,66 +1332,69 @@ namespace conexãomysql.DataSet1TableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Cidade));
             }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(CPF));
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Email));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Email));
             }
             if ((Endereco == null)) {
                 throw new global::System.ArgumentNullException("Endereco");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Endereco));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Endereco));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(idCliente));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(idCliente));
             if ((Nome == null)) {
                 throw new global::System.ArgumentNullException("Nome");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Nome));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Nome));
             }
             if ((Telefone == null)) {
                 throw new global::System.ArgumentNullException("Telefone");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Telefone));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Telefone));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Ativo));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Ativo));
             if ((Original_Cidade == null)) {
                 throw new global::System.ArgumentNullException("Original_Cidade");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Cidade));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Cidade));
             }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_CPF));
             if ((Original_Email == null)) {
                 throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Email));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Email));
             }
             if ((Original_Endereco == null)) {
                 throw new global::System.ArgumentNullException("Original_Endereco");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Endereco));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Endereco));
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_idCliente));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_idCliente));
             if ((Original_Nome == null)) {
                 throw new global::System.ArgumentNullException("Original_Nome");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Nome));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Nome));
             }
             if ((Original_Telefone == null)) {
                 throw new global::System.ArgumentNullException("Original_Telefone");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Telefone));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Telefone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1309,8 +1416,8 @@ namespace conexãomysql.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Ativo, string Cidade, string Email, string Endereco, string Nome, string Telefone, int Original_Ativo, string Original_Cidade, string Original_Email, string Original_Endereco, int Original_idCliente, string Original_Nome, string Original_Telefone) {
-            return this.Update(Ativo, Cidade, Email, Endereco, Original_idCliente, Nome, Telefone, Original_Ativo, Original_Cidade, Original_Email, Original_Endereco, Original_idCliente, Original_Nome, Original_Telefone);
+        public virtual int Update(int Ativo, string Cidade, int CPF, string Email, string Endereco, string Nome, string Telefone, int Original_Ativo, string Original_Cidade, int Original_CPF, string Original_Email, string Original_Endereco, int Original_idCliente, string Original_Nome, string Original_Telefone) {
+            return this.Update(Ativo, Cidade, CPF, Email, Endereco, Original_idCliente, Nome, Telefone, Original_Ativo, Original_Cidade, Original_CPF, Original_Email, Original_Endereco, Original_idCliente, Original_Nome, Original_Telefone);
         }
     }
     
@@ -1405,7 +1512,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TblClientes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clientesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.clientes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1424,7 +1531,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TblClientes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clientesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.clientes.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1442,7 +1549,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TblClientes dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._clientesTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.clientes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1484,7 +1591,7 @@ namespace conexãomysql.DataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataSet1 dataSet) {
+        public virtual int UpdateAll(TblClientes dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

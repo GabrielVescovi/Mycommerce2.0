@@ -17,5 +17,11 @@ namespace conexãomysql
             InitializeComponent();
         }
 
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            gridclientes gridc = new gridclientes();
+            gridc.Show(this);
+            Hide();
+        }
     }
 }
