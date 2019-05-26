@@ -38,20 +38,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridClientesConexao = new conexãomysql.GridClientesConexao();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter1 = new conexãomysql.GridClientesConexaoTableAdapters.clientesTableAdapter();
+            this.gridClientesConexao1 = new conexãomysql.GridClientesConexao();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblClientes = new conexãomysql.TblClientes();
-            this.clientesTableAdapter = new conexãomysql.TblClientesTableAdapters.clientesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // cadastrarcliente
@@ -136,28 +140,51 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idClienteDataGridViewTextBoxColumn,
+            this.ID,
             this.nomeDataGridViewTextBoxColumn,
-            this.cPFDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn,
+            this.Bairro,
             this.cidadeDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.Nome});
+            this.UF,
+            this.emailDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.clientesBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(86, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(72, 9);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(702, 370);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // idClienteDataGridViewTextBoxColumn
+            // gridClientesConexao
             // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "idCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "idCliente";
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gridClientesConexao.DataSetName = "GridClientesConexao";
+            this.gridClientesConexao.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "clientes";
+            this.clientesBindingSource1.DataSource = this.gridClientesConexao;
+            // 
+            // clientesTableAdapter1
+            // 
+            this.clientesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // gridClientesConexao1
+            // 
+            this.gridClientesConexao1.DataSetName = "GridClientesConexao";
+            this.gridClientesConexao1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "clientes";
+            this.clientesBindingSource.DataSource = this.gridClientesConexao1;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -165,13 +192,6 @@
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cPFDataGridViewTextBoxColumn
-            // 
-            this.cPFDataGridViewTextBoxColumn.DataPropertyName = "CPF";
-            this.cPFDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cPFDataGridViewTextBoxColumn.Name = "cPFDataGridViewTextBoxColumn";
-            this.cPFDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefoneDataGridViewTextBoxColumn
             // 
@@ -187,6 +207,13 @@
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
             this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // Bairro
+            // 
+            this.Bairro.DataPropertyName = "Bairro";
+            this.Bairro.HeaderText = "Bairro";
+            this.Bairro.Name = "Bairro";
+            this.Bairro.ReadOnly = true;
+            // 
             // cidadeDataGridViewTextBoxColumn
             // 
             this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
@@ -194,33 +221,19 @@
             this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
             this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // UF
+            // 
+            this.UF.DataPropertyName = "UF";
+            this.UF.HeaderText = "UF";
+            this.UF.Name = "UF";
+            this.UF.ReadOnly = true;
+            // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "clientes";
-            this.clientesBindingSource.DataSource = this.tblClientes;
-            // 
-            // tblClientes
-            // 
-            this.tblClientes.DataSetName = "TblClientes";
-            this.tblClientes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
             // 
             // gridclientes
             // 
@@ -237,10 +250,12 @@
             this.Controls.Add(this.cadastrarcliente);
             this.Name = "gridclientes";
             this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.gridclientes_Load);
+            this.Load += new System.EventHandler(this.Gridclientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,17 +270,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private TblClientes tblClientes;
-        private System.Windows.Forms.BindingSource clientesBindingSource;
-        private TblClientesTableAdapters.clientesTableAdapter clientesTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private GridClientesConexao gridClientesConexao;
+        private System.Windows.Forms.BindingSource clientesBindingSource1;
+        private GridClientesConexaoTableAdapters.clientesTableAdapter clientesTableAdapter1;
+        private GridClientesConexao gridClientesConexao1;
+        private System.Windows.Forms.BindingSource clientesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cPFDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UF;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
     }
 }
