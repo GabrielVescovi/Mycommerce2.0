@@ -38,24 +38,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gridClientesConexao = new conexãomysql.GridClientesConexao();
-            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesTableAdapter1 = new conexãomysql.GridClientesConexaoTableAdapters.clientesTableAdapter();
-            this.gridClientesConexao1 = new conexãomysql.GridClientesConexao();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridClientesConexao1 = new conexãomysql.GridClientesConexao();
+            this.gridClientesConexao = new conexãomysql.GridClientesConexao();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter1 = new conexãomysql.GridClientesConexaoTableAdapters.clientesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cadastrarcliente
@@ -80,6 +80,7 @@
             this.editar.Size = new System.Drawing.Size(54, 53);
             this.editar.TabIndex = 1;
             this.editar.UseVisualStyleBackColor = true;
+            this.editar.Click += new System.EventHandler(this.Editar_Click);
             // 
             // excluir
             // 
@@ -155,36 +156,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(702, 370);
             this.dataGridView1.TabIndex = 7;
             // 
-            // gridClientesConexao
-            // 
-            this.gridClientesConexao.DataSetName = "GridClientesConexao";
-            this.gridClientesConexao.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource1
-            // 
-            this.clientesBindingSource1.DataMember = "clientes";
-            this.clientesBindingSource1.DataSource = this.gridClientesConexao;
-            // 
-            // clientesTableAdapter1
-            // 
-            this.clientesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // gridClientesConexao1
-            // 
-            this.gridClientesConexao1.DataSetName = "GridClientesConexao";
-            this.gridClientesConexao1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "clientes";
-            this.clientesBindingSource.DataSource = this.gridClientesConexao1;
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            // 
+            // Bairro
+            // 
+            this.Bairro.DataPropertyName = "Bairro";
+            this.Bairro.HeaderText = "Bairro";
+            this.Bairro.Name = "Bairro";
+            this.Bairro.ReadOnly = true;
+            // 
+            // UF
+            // 
+            this.UF.DataPropertyName = "UF";
+            this.UF.HeaderText = "UF";
+            this.UF.Name = "UF";
+            this.UF.ReadOnly = true;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -207,13 +198,6 @@
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
             this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Bairro
-            // 
-            this.Bairro.DataPropertyName = "Bairro";
-            this.Bairro.HeaderText = "Bairro";
-            this.Bairro.Name = "Bairro";
-            this.Bairro.ReadOnly = true;
-            // 
             // cidadeDataGridViewTextBoxColumn
             // 
             this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
@@ -221,19 +205,36 @@
             this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
             this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // UF
-            // 
-            this.UF.DataPropertyName = "UF";
-            this.UF.HeaderText = "UF";
-            this.UF.Name = "UF";
-            this.UF.ReadOnly = true;
-            // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "clientes";
+            this.clientesBindingSource.DataSource = this.gridClientesConexao1;
+            // 
+            // gridClientesConexao1
+            // 
+            this.gridClientesConexao1.DataSetName = "GridClientesConexao";
+            this.gridClientesConexao1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridClientesConexao
+            // 
+            this.gridClientesConexao.DataSetName = "GridClientesConexao";
+            this.gridClientesConexao.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "clientes";
+            this.clientesBindingSource1.DataSource = this.gridClientesConexao;
+            // 
+            // clientesTableAdapter1
+            // 
+            this.clientesTableAdapter1.ClearBeforeFill = true;
             // 
             // gridclientes
             // 
@@ -252,10 +253,10 @@
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Gridclientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

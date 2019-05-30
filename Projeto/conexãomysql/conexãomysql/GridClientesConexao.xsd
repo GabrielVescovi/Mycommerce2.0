@@ -33,7 +33,7 @@ FROM            clientes</CommandText>
               <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="listaclientes" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBylistaclientes" GeneratorSourceName="listaclientes" GetMethodModifier="Public" GetMethodName="GetDataBylistaclientes" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBylistaclientes" UserSourceName="listaclientes">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        ID, Nome, Telefone, Endereco, Bairro, Cidade, UF, Email
+                    <CommandText>SELECT        ID, Nome,  Telefone, Endereco, Bairro, Cidade, UF,  Email
 FROM            clientes</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -49,7 +49,7 @@ FROM            clientes</CommandText>
   <xs:element name="GridClientesConexao" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GridClientesConexao" msprop:Generator_UserDSName="GridClientesConexao">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="clientes" msprop:Generator_TableClassName="clientesDataTable" msprop:Generator_TableVarName="tableclientes" msprop:Generator_RowChangedName="clientesRowChanged" msprop:Generator_TablePropName="clientes" msprop:Generator_RowDeletingName="clientesRowDeleting" msprop:Generator_RowChangingName="clientesRowChanging" msprop:Generator_RowEvHandlerName="clientesRowChangeEventHandler" msprop:Generator_RowDeletedName="clientesRowDeleted" msprop:Generator_RowClassName="clientesRow" msprop:Generator_UserTableName="clientes" msprop:Generator_RowEvArgName="clientesRowChangeEvent">
+        <xs:element name="clientes" msprop:Generator_TableClassName="clientesDataTable" msprop:Generator_TableVarName="tableclientes" msprop:Generator_TablePropName="clientes" msprop:Generator_RowDeletingName="clientesRowDeleting" msprop:Generator_RowChangingName="clientesRowChanging" msprop:Generator_RowEvHandlerName="clientesRowChangeEventHandler" msprop:Generator_RowDeletedName="clientesRowDeleted" msprop:Generator_UserTableName="clientes" msprop:Generator_RowChangedName="clientesRowChanged" msprop:Generator_RowEvArgName="clientesRowChangeEvent" msprop:Generator_RowClassName="clientesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_UserColumnName="Cidade" minOccurs="0">

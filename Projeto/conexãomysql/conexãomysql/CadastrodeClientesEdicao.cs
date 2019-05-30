@@ -12,11 +12,11 @@ using MySql.Data.MySqlClient;
 
 namespace conexãomysql
 {
-    public partial class CadastrodeClientes : Form
+    public partial class CadastrodeClientesEdicao : Form
     {
         string conexao = @"server = localhost; Database=my2; Uid=root; Port=3306; Pwd=vssql";
         bool novo;
-        public CadastrodeClientes()
+        public CadastrodeClientesEdicao()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace conexãomysql
             Hide();
         }
 
-        private void CadastrodeClientes_Load(object sender, EventArgs e)
+        private void CadastrodeClientesEdicao_Load(object sender, EventArgs e)
         {
             GravarCad.Enabled = true;
             CancelCad.Enabled = true;
@@ -56,9 +56,12 @@ namespace conexãomysql
                 string UF = txtUF.Text;
                 string email = txtemail.Text;
 
-                string sql = "INSERT INTO CLIENTES(Nome,Telefone,Endereco,Bairro,Cidade,UF,Email)"
-                    + "VALUES('" + txtnome.Text + "','" + fone + "','" + endereco + "','" + bairro + "','" + cidade + "','" + UF + "','" + email + "')";
-          
+                string sql = "UPDATE CLIENTES SET NOME='" + txtnome.Text +
+                    "',TELEFONE='" + fone + "',ENDERECO='" + endereco +
+                    "', BAIRRO='" + bairro + "', CIDADE='" + cidade +
+                    "', UF='" + UF + "', EMAIL='" + email +
+                    "'WHERE ID=" + txtid.Text +';';
+
 
                 MySqlConnection con = new MySqlConnection(conexao);
                 MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -68,7 +71,7 @@ namespace conexãomysql
                 {
                     int i = cmd.ExecuteNonQuery();
                     if (i > 0)
-                        MessageBox.Show("Cadastro realizado com sucesso!");
+                        MessageBox.Show("Cadastro atualizado com sucesso!");
                     gridclientes gridc = new gridclientes();
                     gridc.Show(this);
                     Hide();

@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastrodeClientesEdicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrodeClientesEdicao.Designer.cs">
+      <DependentUpon>CadastrodeClientesEdicao.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastrodeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TblClientes.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CadastrodeClientesEdicao.resx">
+      <DependentUpon>CadastrodeClientesEdicao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastrodeClientes.resx">
       <DependentUpon>CadastrodeClientes.cs</DependentUpon>
     </EmbeddedResource>

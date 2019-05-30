@@ -43,5 +43,13 @@ namespace conexãomysql
             this.clientesTableAdapter1.Fill(this.gridClientesConexao.clientes);
 
         }
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            CadastrodeClientesEdicao cce = new CadastrodeClientesEdicao();
+            cce.Show(this);
+            Hide();
+
+        }
     }
 }

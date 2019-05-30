@@ -1,6 +1,6 @@
 ﻿namespace conexãomysql
 {
-    partial class CadastrodeClientes
+    partial class CadastrodeClientesEdicao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrodeClientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrodeClientesEdicao));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -247,7 +247,7 @@
             this.txtendereco.Size = new System.Drawing.Size(534, 38);
             this.txtendereco.TabIndex = 25;
             // 
-            // CadastrodeClientes
+            // CadastrodeClientesEdicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -271,9 +271,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "CadastrodeClientes";
-            this.Text = "CadastroCliente";
-            this.Load += new System.EventHandler(this.CadastrodeClientes_Load);
+            this.Name = "CadastrodeClientesEdicao";
+            this.Text = "CadastroClienteEdicao";
+            this.Load += new System.EventHandler(this.CadastrodeClientesEdicao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

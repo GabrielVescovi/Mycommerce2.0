@@ -1025,8 +1025,8 @@ namespace conexãomysql.GridClientesConexaoTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        ID, Nome, Telefone, Endereco, Bairro, Cidade, UF, Email\r\nFROM      " +
-                "      clientes";
+            this._commandCollection[1].CommandText = "SELECT        ID, Nome,  Telefone, Endereco, Bairro, Cidade, UF,  Email\r\nFROM    " +
+                "        clientes";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
