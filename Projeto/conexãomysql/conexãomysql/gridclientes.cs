@@ -46,10 +46,25 @@ namespace conexãomysql
 
         private void Editar_Click(object sender, EventArgs e)
         {
+
             CadastrodeClientesEdicao cce = new CadastrodeClientesEdicao();
             cce.Show(this);
             Hide();
 
+        }
+
+        public partial class CadastrodeClientesEdicaoteste : Form{}
+
+
+        private void DataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+          
+            CadastrodeClientesEdicaoteste cce = new CadastrodeClientesEdicaoteste();
+            cce.Show(this);
+            Hide();
+            
+            
+            
         }
     }
 }

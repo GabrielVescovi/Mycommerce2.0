@@ -287,7 +287,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.TextBox txtcidade;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txtid;
@@ -300,5 +299,6 @@
         private System.Windows.Forms.TextBox txtbairro;
         private System.Windows.Forms.MaskedTextBox maskfone;
         private System.Windows.Forms.TextBox txtendereco;
+        public System.Windows.Forms.TextBox txtnome;
     }
 }

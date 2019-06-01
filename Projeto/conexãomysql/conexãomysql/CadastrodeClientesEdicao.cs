@@ -41,7 +41,7 @@ namespace conexãomysql
             txtUF.Enabled = true;
             txtnome.Focus();
             novo = true;
-            
+        
         }
 
         private void GravarCad_Click(object sender, EventArgs e)
