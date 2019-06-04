@@ -51,6 +51,14 @@
             this.gridClientesConexao = new conexãomysql.GridClientesConexao();
             this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter1 = new conexãomysql.GridClientesConexaoTableAdapters.clientesTableAdapter();
+            this.idcliente = new System.Windows.Forms.TextBox();
+            this.NomeC = new System.Windows.Forms.TextBox();
+            this.TelefoneC = new System.Windows.Forms.TextBox();
+            this.EndC = new System.Windows.Forms.TextBox();
+            this.BairroC = new System.Windows.Forms.TextBox();
+            this.CidadeC = new System.Windows.Forms.TextBox();
+            this.UFC = new System.Windows.Forms.TextBox();
+            this.EmailC = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).BeginInit();
@@ -156,7 +164,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(716, 370);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DataGridView1_MouseDoubleClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // ID
             // 
@@ -238,11 +246,83 @@
             // 
             this.clientesTableAdapter1.ClearBeforeFill = true;
             // 
+            // idcliente
+            // 
+            this.idcliente.Location = new System.Drawing.Point(72, 406);
+            this.idcliente.Name = "idcliente";
+            this.idcliente.Size = new System.Drawing.Size(25, 20);
+            this.idcliente.TabIndex = 8;
+            this.idcliente.Visible = false;
+            // 
+            // NomeC
+            // 
+            this.NomeC.Location = new System.Drawing.Point(103, 406);
+            this.NomeC.Name = "NomeC";
+            this.NomeC.Size = new System.Drawing.Size(23, 20);
+            this.NomeC.TabIndex = 9;
+            this.NomeC.Visible = false;
+            // 
+            // TelefoneC
+            // 
+            this.TelefoneC.Location = new System.Drawing.Point(132, 406);
+            this.TelefoneC.Name = "TelefoneC";
+            this.TelefoneC.Size = new System.Drawing.Size(23, 20);
+            this.TelefoneC.TabIndex = 10;
+            this.TelefoneC.Visible = false;
+            // 
+            // EndC
+            // 
+            this.EndC.Location = new System.Drawing.Point(161, 406);
+            this.EndC.Name = "EndC";
+            this.EndC.Size = new System.Drawing.Size(23, 20);
+            this.EndC.TabIndex = 11;
+            this.EndC.Visible = false;
+            // 
+            // BairroC
+            // 
+            this.BairroC.Location = new System.Drawing.Point(190, 406);
+            this.BairroC.Name = "BairroC";
+            this.BairroC.Size = new System.Drawing.Size(23, 20);
+            this.BairroC.TabIndex = 12;
+            this.BairroC.Visible = false;
+            // 
+            // CidadeC
+            // 
+            this.CidadeC.Location = new System.Drawing.Point(219, 406);
+            this.CidadeC.Name = "CidadeC";
+            this.CidadeC.Size = new System.Drawing.Size(23, 20);
+            this.CidadeC.TabIndex = 13;
+            this.CidadeC.Visible = false;
+            // 
+            // UFC
+            // 
+            this.UFC.Location = new System.Drawing.Point(248, 406);
+            this.UFC.Name = "UFC";
+            this.UFC.Size = new System.Drawing.Size(23, 20);
+            this.UFC.TabIndex = 14;
+            this.UFC.Visible = false;
+            // 
+            // EmailC
+            // 
+            this.EmailC.Location = new System.Drawing.Point(277, 406);
+            this.EmailC.Name = "EmailC";
+            this.EmailC.Size = new System.Drawing.Size(23, 20);
+            this.EmailC.TabIndex = 15;
+            this.EmailC.Visible = false;
+            // 
             // gridclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 458);
+            this.Controls.Add(this.EmailC);
+            this.Controls.Add(this.UFC);
+            this.Controls.Add(this.CidadeC);
+            this.Controls.Add(this.BairroC);
+            this.Controls.Add(this.EndC);
+            this.Controls.Add(this.TelefoneC);
+            this.Controls.Add(this.NomeC);
+            this.Controls.Add(this.idcliente);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -287,5 +367,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UF;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox idcliente;
+        private System.Windows.Forms.TextBox NomeC;
+        private System.Windows.Forms.TextBox TelefoneC;
+        private System.Windows.Forms.TextBox EndC;
+        private System.Windows.Forms.TextBox BairroC;
+        private System.Windows.Forms.TextBox CidadeC;
+        private System.Windows.Forms.TextBox UFC;
+        private System.Windows.Forms.TextBox EmailC;
     }
 }

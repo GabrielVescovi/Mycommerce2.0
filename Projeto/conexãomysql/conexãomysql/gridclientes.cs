@@ -47,24 +47,31 @@ namespace conexãomysql
         private void Editar_Click(object sender, EventArgs e)
         {
 
-            CadastrodeClientesEdicao cce = new CadastrodeClientesEdicao();
+            CadastrodeClientesEdicao cce = new CadastrodeClientesEdicao(idcliente.Text, NomeC.Text, TelefoneC.Text, EndC.Text, BairroC.Text, CidadeC.Text,UFC.Text, EmailC.Text);
             cce.Show(this);
             Hide();
 
         }
 
-        public partial class CadastrodeClientesEdicaoteste : Form{}
+        
 
-
-        private void DataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
-            CadastrodeClientesEdicaoteste cce = new CadastrodeClientesEdicaoteste();
-            cce.Show(this);
-            Hide();
-            
-            
-            
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+
+                idcliente.Text = row.Cells["ID"].Value.ToString();
+                NomeC.Text = row.Cells["Nome"].Value.ToString();
+                TelefoneC.Text = row.Cells["Telefone"].Value.ToString();
+                EndC.Text = row.Cells["Endereco"].Value.ToString();
+                BairroC.Text = row.Cells["Bairro"].Value.ToString();
+                CidadeC.Text = row.Cells["Cidade"].Value.ToString();
+                UFC.Text = row.Cells["UF"].Value.ToString();
+                EmailC.Text = row.Cells["Email"].Value.ToString();
+
+                 
+            }
         }
     }
 }

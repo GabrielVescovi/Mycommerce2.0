@@ -21,12 +21,30 @@ namespace conexãomysql
             InitializeComponent();
         }
 
+        public CadastrodeClientesEdicao(string IDcliente,String NomeC,String TelefoneC, String EndC, String BairroC, String CidadeC, String UFC, String EmailC)
+        {
+            InitializeComponent();
+            txtid.Text = IDcliente;
+            txtnome.Text = NomeC;
+            maskfone.Text = TelefoneC;
+            txtendereco.Text = EndC;
+            txtbairro.Text = BairroC;
+            txtcidade.Text = CidadeC;
+            txtUF.Text = UFC;
+            txtemail.Text = EmailC;
+
+        }
+
+
         private void Voltar_Click(object sender, EventArgs e)
         {
             gridclientes gridc = new gridclientes();
             gridc.Show(this);
             Hide();
         }
+
+
+
 
         private void CadastrodeClientesEdicao_Load(object sender, EventArgs e)
         {
@@ -41,7 +59,35 @@ namespace conexãomysql
             txtUF.Enabled = true;
             txtnome.Focus();
             novo = true;
-        
+
+            /*
+             * Tstar mais tarde, para executar o select e trazer o resultado no textbox
+            try
+            {
+                MySqlConnection concli = new MySqlConnection(conexao);
+                concli.Open();
+                MySqlCommand cmdcli = new MySqlCommand("select ID, Nome, Telefone, Endereco, Bairro, Cidade, UF, Email from clientes where ID ='" + txtid + "';", concli);
+                cmdcli.Parameters.Clear();
+                cmdcli.CommandType = CommandType.Text;
+               
+                //recebe o comando
+                MySqlDataReader dr;
+                dr = cmdcli.ExecuteReader();
+                dr.Read();
+                
+                txtnome.Text = dr.GetString(1);
+                
+
+                concli.Close();
+            }
+            catch(Exception erro)
+            {
+
+                MessageBox.Show(erro.Message, "Erro ao buscar o registro");
+            }*/
+
+
+
         }
 
         private void GravarCad_Click(object sender, EventArgs e)
