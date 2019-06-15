@@ -14,7 +14,7 @@ namespace conexãomysql
 {
     public partial class CadastrodeClientesEdicao : Form
     {
-        string conexao = @"server = localhost; Database=my2; Uid=root; Port=3306; Pwd=vssql";
+        static string conString = @"server = localhost; Database=my2; Uid=root; Port=3306; Pwd=vssql";
         bool novo;
         public CadastrodeClientesEdicao()
         {
@@ -60,34 +60,6 @@ namespace conexãomysql
             txtnome.Focus();
             novo = true;
 
-            /*
-             * Tstar mais tarde, para executar o select e trazer o resultado no textbox
-            try
-            {
-                MySqlConnection concli = new MySqlConnection(conexao);
-                concli.Open();
-                MySqlCommand cmdcli = new MySqlCommand("select ID, Nome, Telefone, Endereco, Bairro, Cidade, UF, Email from clientes where ID ='" + txtid + "';", concli);
-                cmdcli.Parameters.Clear();
-                cmdcli.CommandType = CommandType.Text;
-               
-                //recebe o comando
-                MySqlDataReader dr;
-                dr = cmdcli.ExecuteReader();
-                dr.Read();
-                
-                txtnome.Text = dr.GetString(1);
-                
-
-                concli.Close();
-            }
-            catch(Exception erro)
-            {
-
-                MessageBox.Show(erro.Message, "Erro ao buscar o registro");
-            }*/
-
-
-
         }
 
         private void GravarCad_Click(object sender, EventArgs e)
@@ -109,28 +81,28 @@ namespace conexãomysql
                     "'WHERE ID=" + txtid.Text +';';
 
 
-                MySqlConnection con = new MySqlConnection(conexao);
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.CommandType = CommandType.Text;
-                con.Open();
+              
+                MySqlConnection con = new MySqlConnection(conString);
+                MySqlCommand cmd;
+                cmd = new MySqlCommand(sql, con);
                 try
                 {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i > 0)
+                    con.Open();
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
                         MessageBox.Show("Cadastro atualizado com sucesso!");
-                    gridclientes gridc = new gridclientes();
-                    gridc.Show(this);
-                    Hide();
+                    }
+
+                    con.Close();
 
                 }
                 catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Erro");
-                }
-                finally
-                {
                     con.Close();
                 }
+               
 
             }
            

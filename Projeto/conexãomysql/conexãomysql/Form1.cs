@@ -13,10 +13,16 @@ using MySql.Data.MySqlClient;
 namespace conexãomysql
 {
     public partial class Form1 : Form
-    {
+    { 
         public Form1()
         {
             InitializeComponent();
+           
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            login.Focus();
+            login.Select();
         }
 
         private MySqlConnection conexao;
@@ -61,10 +67,7 @@ namespace conexãomysql
             Environment.Exit(0);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
+    
 
         private void Senha_KeyDown(object sender, KeyEventArgs e)
         {

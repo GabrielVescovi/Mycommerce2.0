@@ -12,11 +12,14 @@ using MySql.Data.MySqlClient;
 
 namespace conexãomysql
 {
+
     public partial class gridclientes : Form
     {
+
         public gridclientes()
         {
             InitializeComponent();
+          
         }
 
         private void Voltar_Click(object sender, EventArgs e)
@@ -43,35 +46,34 @@ namespace conexãomysql
             this.clientesTableAdapter1.Fill(this.gridClientesConexao.clientes);
 
         }
-
-        private void Editar_Click(object sender, EventArgs e)
-        {
-
-            CadastrodeClientesEdicao cce = new CadastrodeClientesEdicao(idcliente.Text, NomeC.Text, TelefoneC.Text, EndC.Text, BairroC.Text, CidadeC.Text,UFC.Text, EmailC.Text);
-            cce.Show(this);
-            Hide();
-
-        }
-
+     
         
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+            
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
                 idcliente.Text = row.Cells["ID"].Value.ToString();
-                NomeC.Text = row.Cells["Nome"].Value.ToString();
-                TelefoneC.Text = row.Cells["Telefone"].Value.ToString();
-                EndC.Text = row.Cells["Endereco"].Value.ToString();
-                BairroC.Text = row.Cells["Bairro"].Value.ToString();
-                CidadeC.Text = row.Cells["Cidade"].Value.ToString();
                 UFC.Text = row.Cells["UF"].Value.ToString();
-                EmailC.Text = row.Cells["Email"].Value.ToString();
+                BairroC.Text = row.Cells["Bairro"].Value.ToString();
 
-                 
             }
+
+        }
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            CadastrodeClientesEdicao cce = new CadastrodeClientesEdicao(idcliente.Text, NomeC.Text, TelefoneC.Text, EndC.Text, BairroC.Text, CidadeC.Text, UFC.Text, EmailC.Text);
+            cce.Show(this);
+            Hide();
         }
     }
+
+
 }

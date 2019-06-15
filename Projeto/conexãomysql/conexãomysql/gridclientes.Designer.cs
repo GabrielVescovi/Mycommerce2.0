@@ -164,7 +164,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(716, 370);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ID
             // 
@@ -252,7 +252,6 @@
             this.idcliente.Name = "idcliente";
             this.idcliente.Size = new System.Drawing.Size(25, 20);
             this.idcliente.TabIndex = 8;
-            this.idcliente.Visible = false;
             // 
             // NomeC
             // 
@@ -260,7 +259,6 @@
             this.NomeC.Name = "NomeC";
             this.NomeC.Size = new System.Drawing.Size(23, 20);
             this.NomeC.TabIndex = 9;
-            this.NomeC.Visible = false;
             // 
             // TelefoneC
             // 
@@ -268,7 +266,6 @@
             this.TelefoneC.Name = "TelefoneC";
             this.TelefoneC.Size = new System.Drawing.Size(23, 20);
             this.TelefoneC.TabIndex = 10;
-            this.TelefoneC.Visible = false;
             // 
             // EndC
             // 
@@ -276,7 +273,6 @@
             this.EndC.Name = "EndC";
             this.EndC.Size = new System.Drawing.Size(23, 20);
             this.EndC.TabIndex = 11;
-            this.EndC.Visible = false;
             // 
             // BairroC
             // 
@@ -284,7 +280,6 @@
             this.BairroC.Name = "BairroC";
             this.BairroC.Size = new System.Drawing.Size(23, 20);
             this.BairroC.TabIndex = 12;
-            this.BairroC.Visible = false;
             // 
             // CidadeC
             // 
@@ -292,7 +287,6 @@
             this.CidadeC.Name = "CidadeC";
             this.CidadeC.Size = new System.Drawing.Size(23, 20);
             this.CidadeC.TabIndex = 13;
-            this.CidadeC.Visible = false;
             // 
             // UFC
             // 
@@ -300,7 +294,6 @@
             this.UFC.Name = "UFC";
             this.UFC.Size = new System.Drawing.Size(23, 20);
             this.UFC.TabIndex = 14;
-            this.UFC.Visible = false;
             // 
             // EmailC
             // 
@@ -308,7 +301,6 @@
             this.EmailC.Name = "EmailC";
             this.EmailC.Size = new System.Drawing.Size(23, 20);
             this.EmailC.TabIndex = 15;
-            this.EmailC.Visible = false;
             // 
             // gridclientes
             // 
