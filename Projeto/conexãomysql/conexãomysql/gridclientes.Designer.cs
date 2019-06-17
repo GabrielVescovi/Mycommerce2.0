@@ -99,6 +99,7 @@
             this.excluir.Size = new System.Drawing.Size(54, 53);
             this.excluir.TabIndex = 2;
             this.excluir.UseVisualStyleBackColor = true;
+            this.excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // voltar
             // 

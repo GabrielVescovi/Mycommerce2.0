@@ -36,14 +36,6 @@ namespace conexãomysql
         }
 
 
-        private void Voltar_Click(object sender, EventArgs e)
-        {
-            gridclientes gridc = new gridclientes();
-            gridc.Show(this);
-            Hide();
-        }
-
-
 
 
         private void CadastrodeClientesEdicao_Load(object sender, EventArgs e)
@@ -59,6 +51,7 @@ namespace conexãomysql
             txtUF.Enabled = true;
             txtnome.Focus();
             novo = true;
+            
 
         }
 
@@ -92,6 +85,9 @@ namespace conexãomysql
                     if (cmd.ExecuteNonQuery() > 0)
                     {
                         MessageBox.Show("Cadastro atualizado com sucesso!");
+                        gridclientes gridc = new gridclientes();
+                        gridc.Show(this);
+                        Hide();
                     }
 
                     con.Close();

@@ -39,7 +39,6 @@
             this.txtcidade = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.voltar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.CancelCad = new System.Windows.Forms.Button();
             this.GravarCad = new System.Windows.Forms.Button();
@@ -147,20 +146,6 @@
             this.txtid.Size = new System.Drawing.Size(99, 38);
             this.txtid.TabIndex = 13;
             // 
-            // voltar
-            // 
-            this.voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("voltar.BackgroundImage")));
-            this.voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voltar.Location = new System.Drawing.Point(636, 325);
-            this.voltar.Name = "voltar";
-            this.voltar.Size = new System.Drawing.Size(54, 53);
-            this.voltar.TabIndex = 14;
-            this.voltar.Text = "Voltar";
-            this.voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.voltar.UseVisualStyleBackColor = true;
-            this.voltar.Click += new System.EventHandler(this.Voltar_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -260,7 +245,6 @@
             this.Controls.Add(this.CancelCad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.maskfone);
-            this.Controls.Add(this.voltar);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.txtcidade);
@@ -290,7 +274,6 @@
         private System.Windows.Forms.TextBox txtcidade;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.Button voltar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button CancelCad;
         private System.Windows.Forms.Button GravarCad;
