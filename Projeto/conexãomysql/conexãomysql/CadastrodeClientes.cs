@@ -21,13 +21,6 @@ namespace conexãomysql
             InitializeComponent();
         }
 
-        private void Voltar_Click(object sender, EventArgs e)
-        {
-            gridclientes gridc = new gridclientes();
-            gridc.Show(this);
-            Hide();
-        }
-
         private void CadastrodeClientes_Load(object sender, EventArgs e)
         {
             GravarCad.Enabled = true;
@@ -43,6 +36,8 @@ namespace conexãomysql
             novo = true;
             
         }
+
+
 
         private void GravarCad_Click(object sender, EventArgs e)
         {
@@ -92,6 +87,21 @@ namespace conexãomysql
             gridclientes gridc = new gridclientes();
             gridc.Show(this);
             Hide();
+        }
+
+        private void Telefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                maskfone.Focus();
+            }
+        }
+        private void Endereco_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtendereco.Focus();
+            }
         }
     }
 }
