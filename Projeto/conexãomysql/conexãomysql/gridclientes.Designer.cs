@@ -59,6 +59,8 @@
             this.CidadeC = new System.Windows.Forms.TextBox();
             this.UFC = new System.Windows.Forms.TextBox();
             this.EmailC = new System.Windows.Forms.TextBox();
+            this.txtbusca = new System.Windows.Forms.TextBox();
+            this.Buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridClientesConexao1)).BeginInit();
@@ -74,7 +76,7 @@
             this.cadastrarcliente.Location = new System.Drawing.Point(12, 23);
             this.cadastrarcliente.Name = "cadastrarcliente";
             this.cadastrarcliente.Size = new System.Drawing.Size(54, 53);
-            this.cadastrarcliente.TabIndex = 0;
+            this.cadastrarcliente.TabIndex = 3;
             this.cadastrarcliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cadastrarcliente.UseVisualStyleBackColor = true;
             this.cadastrarcliente.Click += new System.EventHandler(this.Cadastrar_Click);
@@ -86,7 +88,7 @@
             this.editar.Location = new System.Drawing.Point(12, 99);
             this.editar.Name = "editar";
             this.editar.Size = new System.Drawing.Size(54, 53);
-            this.editar.TabIndex = 1;
+            this.editar.TabIndex = 4;
             this.editar.UseVisualStyleBackColor = true;
             this.editar.Click += new System.EventHandler(this.Editar_Click);
             // 
@@ -97,7 +99,7 @@
             this.excluir.Location = new System.Drawing.Point(12, 171);
             this.excluir.Name = "excluir";
             this.excluir.Size = new System.Drawing.Size(54, 53);
-            this.excluir.TabIndex = 2;
+            this.excluir.TabIndex = 5;
             this.excluir.UseVisualStyleBackColor = true;
             this.excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
@@ -109,7 +111,7 @@
             this.voltar.Location = new System.Drawing.Point(734, 385);
             this.voltar.Name = "voltar";
             this.voltar.Size = new System.Drawing.Size(54, 53);
-            this.voltar.TabIndex = 3;
+            this.voltar.TabIndex = 6;
             this.voltar.Text = "Voltar";
             this.voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.voltar.UseVisualStyleBackColor = true;
@@ -121,7 +123,7 @@
             this.label1.Location = new System.Drawing.Point(14, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Cadastrar";
             // 
             // label2
@@ -130,7 +132,7 @@
             this.label2.Location = new System.Drawing.Point(23, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Editar";
             // 
             // label3
@@ -139,7 +141,7 @@
             this.label3.Location = new System.Drawing.Point(19, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 6;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Excluir";
             // 
             // dataGridView1
@@ -249,7 +251,7 @@
             // 
             // idcliente
             // 
-            this.idcliente.Location = new System.Drawing.Point(72, 406);
+            this.idcliente.Location = new System.Drawing.Point(470, 437);
             this.idcliente.Name = "idcliente";
             this.idcliente.Size = new System.Drawing.Size(25, 20);
             this.idcliente.TabIndex = 8;
@@ -257,7 +259,7 @@
             // 
             // NomeC
             // 
-            this.NomeC.Location = new System.Drawing.Point(103, 406);
+            this.NomeC.Location = new System.Drawing.Point(501, 437);
             this.NomeC.Name = "NomeC";
             this.NomeC.Size = new System.Drawing.Size(23, 20);
             this.NomeC.TabIndex = 9;
@@ -265,7 +267,7 @@
             // 
             // TelefoneC
             // 
-            this.TelefoneC.Location = new System.Drawing.Point(132, 406);
+            this.TelefoneC.Location = new System.Drawing.Point(530, 437);
             this.TelefoneC.Name = "TelefoneC";
             this.TelefoneC.Size = new System.Drawing.Size(23, 20);
             this.TelefoneC.TabIndex = 10;
@@ -273,7 +275,7 @@
             // 
             // EndC
             // 
-            this.EndC.Location = new System.Drawing.Point(161, 406);
+            this.EndC.Location = new System.Drawing.Point(559, 437);
             this.EndC.Name = "EndC";
             this.EndC.Size = new System.Drawing.Size(23, 20);
             this.EndC.TabIndex = 11;
@@ -281,7 +283,7 @@
             // 
             // BairroC
             // 
-            this.BairroC.Location = new System.Drawing.Point(190, 406);
+            this.BairroC.Location = new System.Drawing.Point(588, 437);
             this.BairroC.Name = "BairroC";
             this.BairroC.Size = new System.Drawing.Size(23, 20);
             this.BairroC.TabIndex = 12;
@@ -289,7 +291,7 @@
             // 
             // CidadeC
             // 
-            this.CidadeC.Location = new System.Drawing.Point(219, 406);
+            this.CidadeC.Location = new System.Drawing.Point(617, 437);
             this.CidadeC.Name = "CidadeC";
             this.CidadeC.Size = new System.Drawing.Size(23, 20);
             this.CidadeC.TabIndex = 13;
@@ -297,7 +299,7 @@
             // 
             // UFC
             // 
-            this.UFC.Location = new System.Drawing.Point(248, 406);
+            this.UFC.Location = new System.Drawing.Point(646, 437);
             this.UFC.Name = "UFC";
             this.UFC.Size = new System.Drawing.Size(23, 20);
             this.UFC.TabIndex = 14;
@@ -305,17 +307,38 @@
             // 
             // EmailC
             // 
-            this.EmailC.Location = new System.Drawing.Point(277, 406);
+            this.EmailC.Location = new System.Drawing.Point(675, 437);
             this.EmailC.Name = "EmailC";
             this.EmailC.Size = new System.Drawing.Size(23, 20);
             this.EmailC.TabIndex = 15;
             this.EmailC.Visible = false;
+            // 
+            // txtbusca
+            // 
+            this.txtbusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbusca.Location = new System.Drawing.Point(72, 385);
+            this.txtbusca.Name = "txtbusca";
+            this.txtbusca.Size = new System.Drawing.Size(407, 31);
+            this.txtbusca.TabIndex = 16;
+            // 
+            // Buscar
+            // 
+            this.Buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Buscar.BackgroundImage")));
+            this.Buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Buscar.Location = new System.Drawing.Point(483, 382);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(39, 38);
+            this.Buscar.TabIndex = 17;
+            this.Buscar.UseVisualStyleBackColor = true;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // gridclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 458);
+            this.Controls.Add(this.Buscar);
+            this.Controls.Add(this.txtbusca);
             this.Controls.Add(this.EmailC);
             this.Controls.Add(this.UFC);
             this.Controls.Add(this.CidadeC);
@@ -377,5 +400,7 @@
         private System.Windows.Forms.TextBox CidadeC;
         private System.Windows.Forms.TextBox UFC;
         private System.Windows.Forms.TextBox EmailC;
+        private System.Windows.Forms.TextBox txtbusca;
+        private System.Windows.Forms.Button Buscar;
     }
 }

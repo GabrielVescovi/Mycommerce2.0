@@ -139,11 +139,13 @@ namespace conexãomysql
 
         private void Telefone_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            if (e.KeyCode == Keys.Enter)
             {
                 maskfone.Focus();
             }
-
+            
+             
+            
         }
         private void Endereco_KeyDown(object sender, KeyEventArgs e)
         {
@@ -154,7 +156,7 @@ namespace conexãomysql
         }
         private void Bairro_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab))
+            if ((e.KeyCode == Keys.Enter))
             {
                 txtbairro.Focus();
             }
@@ -162,24 +164,32 @@ namespace conexãomysql
         }
         private void Cidade_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab))
+            if ((e.KeyCode == Keys.Enter))
             {
                 txtcidade.Focus();
             }
         }
         private void UF_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab))
+            if ((e.KeyCode == Keys.Enter))
             {
                 txtUF.Focus();
             }
         }
         private void Email_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab))
+            if ((e.KeyCode == Keys.Enter))
             {
                 txtemail.Focus();
             }
         }
+        private void Gravar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter))
+            {
+                GravarCad.Focus();
+            }
+        }
+        
     }
 }

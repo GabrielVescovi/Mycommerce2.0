@@ -203,5 +203,12 @@ namespace conexãomysql
                 txtemail.Focus();
             }
         }
+        private void Gravar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter))
+            {
+                GravarCad.Focus();
+            }
+        }
     }
 }

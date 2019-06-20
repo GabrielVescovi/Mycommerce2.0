@@ -56,7 +56,7 @@
             this.label1.Location = new System.Drawing.Point(56, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 31);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
             // label2
@@ -66,7 +66,7 @@
             this.label2.Location = new System.Drawing.Point(42, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 31);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Cidade";
             // 
             // label3
@@ -76,7 +76,7 @@
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 31);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 0;
             this.label3.Text = "ID Cliente";
             // 
             // label4
@@ -96,7 +96,7 @@
             this.label5.Location = new System.Drawing.Point(22, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 31);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 2;
             this.label5.Text = "Telefone";
             // 
             // label6
@@ -106,7 +106,7 @@
             this.label6.Location = new System.Drawing.Point(52, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 31);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 6;
             this.label6.Text = "E-mail";
             // 
             // txtnome
@@ -116,7 +116,7 @@
             this.txtnome.MaxLength = 50;
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(534, 38);
-            this.txtnome.TabIndex = 7;
+            this.txtnome.TabIndex = 8;
             this.txtnome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Telefone_KeyDown);
             // 
             // txtcidade
@@ -126,7 +126,7 @@
             this.txtcidade.MaxLength = 45;
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(391, 38);
-            this.txtcidade.TabIndex = 8;
+            this.txtcidade.TabIndex = 12;
             this.txtcidade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UF_KeyDown);
             // 
             // txtemail
@@ -136,7 +136,8 @@
             this.txtemail.MaxLength = 60;
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(534, 38);
-            this.txtemail.TabIndex = 11;
+            this.txtemail.TabIndex = 14;
+            this.txtemail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Gravar_KeyDown);
             // 
             // txtid
             // 
@@ -146,7 +147,7 @@
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
             this.txtid.Size = new System.Drawing.Size(99, 38);
-            this.txtid.TabIndex = 13;
+            this.txtid.TabIndex = 17;
             // 
             // label8
             // 
@@ -155,7 +156,7 @@
             this.label8.Location = new System.Drawing.Point(550, 240);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 31);
-            this.label8.TabIndex = 17;
+            this.label8.TabIndex = 7;
             this.label8.Text = "UF";
             // 
             // CancelCad
@@ -166,7 +167,7 @@
             this.CancelCad.Location = new System.Drawing.Point(633, 3);
             this.CancelCad.Name = "CancelCad";
             this.CancelCad.Size = new System.Drawing.Size(57, 53);
-            this.CancelCad.TabIndex = 20;
+            this.CancelCad.TabIndex = 16;
             this.CancelCad.Text = "Cancelar";
             this.CancelCad.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CancelCad.UseMnemonic = false;
@@ -181,7 +182,7 @@
             this.GravarCad.Location = new System.Drawing.Point(570, 3);
             this.GravarCad.Name = "GravarCad";
             this.GravarCad.Size = new System.Drawing.Size(57, 53);
-            this.GravarCad.TabIndex = 21;
+            this.GravarCad.TabIndex = 15;
             this.GravarCad.Text = "Gravar";
             this.GravarCad.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GravarCad.UseMnemonic = false;
@@ -195,7 +196,7 @@
             this.txtUF.MaxLength = 2;
             this.txtUF.Name = "txtUF";
             this.txtUF.Size = new System.Drawing.Size(75, 38);
-            this.txtUF.TabIndex = 22;
+            this.txtUF.TabIndex = 13;
             this.txtUF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Email_KeyDown);
             // 
             // label9
@@ -205,7 +206,7 @@
             this.label9.Location = new System.Drawing.Point(56, 197);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 31);
-            this.label9.TabIndex = 23;
+            this.label9.TabIndex = 4;
             this.label9.Text = "Bairro";
             // 
             // txtbairro
@@ -215,7 +216,7 @@
             this.txtbairro.MaxLength = 45;
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(534, 38);
-            this.txtbairro.TabIndex = 24;
+            this.txtbairro.TabIndex = 11;
             this.txtbairro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Cidade_KeyDown);
             // 
             // maskfone
@@ -225,7 +226,7 @@
             this.maskfone.Mask = "(99) 0000-0000";
             this.maskfone.Name = "maskfone";
             this.maskfone.Size = new System.Drawing.Size(201, 38);
-            this.maskfone.TabIndex = 15;
+            this.maskfone.TabIndex = 9;
             this.maskfone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Endereco_KeyDown);
             // 
             // txtendereco
@@ -235,7 +236,7 @@
             this.txtendereco.MaxLength = 60;
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(534, 38);
-            this.txtendereco.TabIndex = 25;
+            this.txtendereco.TabIndex = 10;
             this.txtendereco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Bairro_KeyDown);
             // 
             // CadastrodeClientesEdicao

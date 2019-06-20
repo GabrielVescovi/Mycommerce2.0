@@ -41,7 +41,7 @@
             this.button1.Location = new System.Drawing.Point(127, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 38);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 4;
             this.button1.Text = "conexao";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
@@ -52,7 +52,7 @@
             this.login.Location = new System.Drawing.Point(127, 49);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(226, 38);
-            this.login.TabIndex = 1;
+            this.login.TabIndex = 2;
             this.login.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             // 
             // senha
@@ -62,7 +62,7 @@
             this.senha.Name = "senha";
             this.senha.PasswordChar = '*';
             this.senha.Size = new System.Drawing.Size(226, 38);
-            this.senha.TabIndex = 2;
+            this.senha.TabIndex = 3;
             this.senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Senha_KeyDown);
             // 
             // label1
@@ -72,7 +72,7 @@
             this.label1.Location = new System.Drawing.Point(17, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 31);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
             // label2
@@ -82,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(33, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 31);
-            this.label2.TabIndex = 4;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Senha";
             // 
             // button2

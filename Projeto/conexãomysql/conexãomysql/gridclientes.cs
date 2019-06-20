@@ -107,7 +107,18 @@ namespace conexãomysql
                 MessageBox.Show("Cadastro excluido!");
                 dataGridView1.Update();
                 dataGridView1.Refresh();
-  
+                string strSelect = "SELECT * FROM clientes WHERE Nome LIKE (@Nome)";
+
+                using (MySqlConnection conn = new MySqlConnection(conString))
+                {
+                    MySqlDataAdapter da = new MySqlDataAdapter(strSelect, conn);
+                    //Passagem por parâmetros.
+                    da.SelectCommand.Parameters.AddWithValue("@Nome", txtbusca.Text + "%");
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "Clientes");
+                    dataGridView1.DataSource = ds.Tables["Clientes"];
+                }
+
             }
             catch(Exception ex)
             {
@@ -120,7 +131,23 @@ namespace conexãomysql
             }
 
         }
-        
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            string strSelect = "SELECT * FROM clientes WHERE Nome LIKE (@Nome)";
+
+            using (MySqlConnection conn = new MySqlConnection(conString))
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter(strSelect, conn);
+                //Passagem por parâmetros.
+                da.SelectCommand.Parameters.AddWithValue("@Nome", txtbusca.Text + "%");
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Clientes");
+                dataGridView1.DataSource = ds.Tables["Clientes"];
+                txtbusca.Text = "";
+            }
+
+        }
     }
 
 
