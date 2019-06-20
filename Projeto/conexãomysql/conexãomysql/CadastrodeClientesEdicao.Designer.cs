@@ -117,6 +117,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(534, 38);
             this.txtnome.TabIndex = 7;
+            this.txtnome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Telefone_KeyDown);
             // 
             // txtcidade
             // 
@@ -126,6 +127,7 @@
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(391, 38);
             this.txtcidade.TabIndex = 8;
+            this.txtcidade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UF_KeyDown);
             // 
             // txtemail
             // 
@@ -194,6 +196,7 @@
             this.txtUF.Name = "txtUF";
             this.txtUF.Size = new System.Drawing.Size(75, 38);
             this.txtUF.TabIndex = 22;
+            this.txtUF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Email_KeyDown);
             // 
             // label9
             // 
@@ -213,6 +216,7 @@
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(534, 38);
             this.txtbairro.TabIndex = 24;
+            this.txtbairro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Cidade_KeyDown);
             // 
             // maskfone
             // 
@@ -222,6 +226,7 @@
             this.maskfone.Name = "maskfone";
             this.maskfone.Size = new System.Drawing.Size(201, 38);
             this.maskfone.TabIndex = 15;
+            this.maskfone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Endereco_KeyDown);
             // 
             // txtendereco
             // 
@@ -231,6 +236,7 @@
             this.txtendereco.Name = "txtendereco";
             this.txtendereco.Size = new System.Drawing.Size(534, 38);
             this.txtendereco.TabIndex = 25;
+            this.txtendereco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Bairro_KeyDown);
             // 
             // CadastrodeClientesEdicao
             // 
@@ -256,6 +262,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadastrodeClientesEdicao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroClienteEdicao";
             this.Load += new System.EventHandler(this.CadastrodeClientesEdicao_Load);
             this.ResumeLayout(false);

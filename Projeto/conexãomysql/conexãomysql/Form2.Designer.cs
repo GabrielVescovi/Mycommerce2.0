@@ -85,6 +85,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clientes);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mycommerce 2.0";
             this.ResumeLayout(false);
             this.PerformLayout();

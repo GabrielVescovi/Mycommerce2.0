@@ -105,8 +105,9 @@ namespace conexãomysql
                 int i = cmd.ExecuteNonQuery();
                 if (i >0)                
                 MessageBox.Show("Cadastro excluido!");
-              
-                
+                dataGridView1.Update();
+                dataGridView1.Refresh();
+  
             }
             catch(Exception ex)
             {
@@ -117,7 +118,9 @@ namespace conexãomysql
                 con.Close();
                 
             }
+
         }
+        
     }
 
 

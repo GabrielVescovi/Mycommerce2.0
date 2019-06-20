@@ -60,6 +60,7 @@ namespace conexãomysql
             if (novo)
             {
                 maskfone.TextMaskFormat=000;
+                string Nome = txtnome.Text;
                 string fone = maskfone.Text;
                 string endereco = txtendereco.Text;
                 string bairro = txtbairro.Text;
@@ -67,7 +68,7 @@ namespace conexãomysql
                 string UF = txtUF.Text;
                 string email = txtemail.Text;
 
-                string sql = "UPDATE CLIENTES SET NOME='" + txtnome.Text +
+                string sql = "UPDATE CLIENTES SET NOME='" + Nome +
                     "',TELEFONE='" + fone + "',ENDERECO='" + endereco +
                     "', BAIRRO='" + bairro + "', CIDADE='" + cidade +
                     "', UF='" + UF + "', EMAIL='" + email +
@@ -78,27 +79,73 @@ namespace conexãomysql
                 MySqlConnection con = new MySqlConnection(conString);
                 MySqlCommand cmd;
                 cmd = new MySqlCommand(sql, con);
-                try
-                {
-                    con.Open();
 
-                    if (cmd.ExecuteNonQuery() > 0)
+                if (Nome == string.Empty)
+                {
+                    MessageBox.Show("Nome em Branco");
+                    txtnome.Focus();
+                    txtnome.Select();
+                }
+                else if (fone == string.Empty)
+                {
+                    MessageBox.Show("Telefone em Branco");
+                    maskfone.Focus();
+                    maskfone.Select();
+                }
+                else if (endereco == string.Empty)
+                {
+                    MessageBox.Show("Endereço em Branco");
+                    txtendereco.Focus();
+                    txtendereco.Select();
+                }
+                else if (bairro == string.Empty)
+                {
+                    MessageBox.Show("Bairro em Branco");
+                    txtbairro.Focus();
+                    txtbairro.Select();
+                }
+                else if (cidade == string.Empty)
+                {
+                    MessageBox.Show("Cidade em branco");
+                    txtcidade.Focus();
+                    txtcidade.Select();
+                }
+                else if (UF == string.Empty)
+                {
+                    MessageBox.Show("UF em Branco");
+                    txtUF.Focus();
+                    txtUF.Select();
+                }
+                else if (email == string.Empty)
+                {
+                    MessageBox.Show("E-mail em Branco");
+                    txtemail.Focus();
+                    txtemail.Select();
+                }
+                else
+                {
+
+                    try
                     {
-                        MessageBox.Show("Cadastro atualizado com sucesso!");
-                        gridclientes gridc = new gridclientes();
-                        gridc.Show(this);
-                        Hide();
+                        con.Open();
+
+                        if (cmd.ExecuteNonQuery() > 0)
+                        {
+                            MessageBox.Show("Cadastro atualizado com sucesso!");
+                            gridclientes gridc = new gridclientes();
+                            gridc.Show(this);
+                            Hide();
+                        }
+
+                        con.Close();
+
                     }
-
-                    con.Close();
-
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Erro");
+                        con.Close();
+                    }
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Erro");
-                    con.Close();
-                }
-               
 
             }
            
@@ -109,6 +156,52 @@ namespace conexãomysql
             gridclientes gridc = new gridclientes();
             gridc.Show(this);
             Hide();
+        }
+
+      
+        private void Telefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                maskfone.Focus();
+            }
+
+        }
+        private void Endereco_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtendereco.Focus();
+            }
+        }
+        private void Bairro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtbairro.Focus();
+            }
+
+        }
+        private void Cidade_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtcidade.Focus();
+            }
+        }
+        private void UF_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtUF.Focus();
+            }
+        }
+        private void Email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtemail.Focus();
+            }
         }
     }
 }

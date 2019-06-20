@@ -333,6 +333,7 @@
             this.Controls.Add(this.editar);
             this.Controls.Add(this.cadastrarcliente);
             this.Name = "gridclientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Gridclientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
