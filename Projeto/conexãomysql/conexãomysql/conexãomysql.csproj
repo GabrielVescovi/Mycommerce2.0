@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E82424AF-A2C0-463C-968A-A1BE0DF84E61}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>conexãomysql</RootNamespace>
-    <AssemblyName>conexãomysql</AssemblyName>
+    <RootNamespace>conexãomysql2</RootNamespace>
+    <AssemblyName>conexãomysql2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -66,11 +66,6 @@
     <Compile Include="CadastrodeClientes.Designer.cs">
       <DependentUpon>CadastrodeClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,14 +91,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TblClientes.cs">
-      <DependentUpon>TblClientes.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TblClientes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TblClientes.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CadastrodeClientesEdicao.resx">
       <DependentUpon>CadastrodeClientesEdicao.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,19 +114,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ConectaBanco.config" />
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="GridClientesConexao.xsc">
       <DependentUpon>GridClientesConexao.xsd</DependentUpon>
     </None>
@@ -161,17 +138,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TblClientes.xsc">
-      <DependentUpon>TblClientes.xsd</DependentUpon>
-    </None>
-    <None Include="TblClientes.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TblClientes.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TblClientes.xss">
-      <DependentUpon>TblClientes.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

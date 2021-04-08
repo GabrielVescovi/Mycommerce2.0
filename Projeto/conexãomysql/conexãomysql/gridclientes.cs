@@ -43,16 +43,15 @@ namespace conexãomysql
 
         private void Gridclientes_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'gridClientesConexao1.clientes'. Você pode movê-la ou removê-la conforme necessário.
-            this.clientesTableAdapter1.Fill(this.gridClientesConexao1.clientes);
-            // TODO: esta linha de código carrega dados na tabela 'gridClientesConexao.clientes'. Você pode movê-la ou removê-la conforme necessário.
-            this.clientesTableAdapter1.Fill(this.gridClientesConexao.clientes);
+            // TODO: esta linha de código carrega dados na tabela 'gridClientesConexao.DataTable'. Você pode movê-la ou removê-la conforme necessário.
+            this.dataTableTableAdapter.Fill(this.gridClientesConexao.DataTable);
+
 
         }
-     
-        
 
-            
+
+
+
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
